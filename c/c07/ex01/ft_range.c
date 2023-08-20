@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ftomaz-c <ftomaz-c@student.42lisboa.pt>    +#+  +:+       +#+        */
+/*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 11:58:12 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/04/03 13:25:02 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/08/19 18:35:30 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	*ft_range(int min, int max)
 
 	if (int_array == NULL)
 		return (NULL);
-	
+
 	int	*array_start = int_array;
 
 	while (min < max)
@@ -30,7 +30,7 @@ int	*ft_range(int min, int max)
 	return (array_start);
 }
 
-/*#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
@@ -48,4 +48,4 @@ int	main(void)
 	printf("\n");
 	free(array);
 	return(0);
-}*/
+} */

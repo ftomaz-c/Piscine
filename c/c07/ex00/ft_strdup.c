@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ftomaz-c <ftomaz-c@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:20:49 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/03/22 16:29:36 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/08/19 18:33:08 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,16 @@ char	*ft_strdup(char *src)
 	return (temp);
 }
 
-/*#include <stdio.h>
+/* #include <stdio.h>
 
 int	main(void)
 {
 	char	*src = "Hello World!";
 	char	*dest = ft_strdup(src);
 
-	printf("Original string: %s;\n", src);
-	printf("New string: %s.\n", dest);
+	printf("Original string:	%s\n", src);
+	printf("New string:		%s\n", dest);
 
 	free(dest);
 	return (0);
-}*/
+} */
