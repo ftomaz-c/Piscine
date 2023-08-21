@@ -6,7 +6,7 @@
 /*   By: ftomaz-c <ftomaz-c@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:14:13 by ftomaz-c          #+#    #+#             */
-/*   Updated: 2023/08/21 15:45:31 by ftomaz-c         ###   ########.fr       */
+/*   Updated: 2023/08/21 16:04:50 by ftomaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strcpy(char *s1, char *s2)
 	return (s1);
 }
 
-void	free_nodes(t_stock_str *tab, int len)
+void	free_tab(t_stock_str *tab, int len)
 {
 	int	i;
 
@@ -57,25 +57,26 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 	int			index;
 
 	if (ac <= 0 || av == NULL)
-		return NULL;
-	tab = (t_stock_str *)malloc((ac + 1) * sizeof(t_stock_str));
+		return (NULL);
+	tab = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
 	if (tab == NULL)
-		return NULL;
+		return (NULL);
 	index = 0;
 	while (index < ac)
 	{
 		tab[index].size = ft_strlen(av[index]);
 		tab[index].str = av[index];
-		tab[index].copy = (char *)malloc((tab[index].size + 1) * sizeof(char));
+		tab[index].copy = (char *)malloc(sizeof(char) * (tab[index].size + 1));
 		if (!tab[index].copy)
 		{
-			free_nodes(tab, index);
-			return NULL;
+			free_tab(tab, index);
+			return (NULL);
 		}
 		ft_strcpy(tab[index++].copy, av[index]);
 	}
 	tab[ac].size = 0;
 	tab[ac].str = NULL;
 	tab[ac].copy = NULL;
-	return tab;
+	return (tab);
 }
+

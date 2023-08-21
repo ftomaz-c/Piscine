@@ -1,5 +1,6 @@
 {
 	"files.associations": {
-		"ft_point.h": "c"
+		"ft_point.h": "c",
+		"unistd.h": "c"
 	}
 }
